@@ -3,23 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Meta Information for Sharing -->
-<meta name="description" content="GadgetPlug - Premium iPhones at Great Prices. Discover our collection of quality iPhones with flexible payment options.">
-<meta property="og:title" content="GadgetPlug - Premium iPhones">
-<meta property="og:description" content="Explore premium iPhones with flexible payment options. Shop now at GadgetPlug!">
-<meta property="og:image" content="gadgetpluglogo.png">
-<meta property="og:url" content="https://play0ground.github.io/GadgetPlug/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GadgetPlug - Premium iPhones">
-<meta name="twitter:description" content="Discover quality iPhones at great prices. Flexible payment options available.">
-<meta name="twitter:image" content="Screenshot 2024-11-20 141930.png">
-
-<!-- Favicon and Logo -->
-<link rel="icon" href="gadgetpluglogo.png" type="image/png">
-<link rel="apple-touch-icon" href="gadgetpluglogo.png">
-
     <title>GadgetPlug - Premium iPhones</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -133,51 +116,14 @@
             background: var(--primary-color);
             color: white;
         }
-
-        .loader {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid var(--primary-color);
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1.2s linear infinite;
-            margin: 2rem auto;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .loader-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .slick-slide img {
-            height: 400px;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        
-
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="gadgetpluglogo.png" alt="GadgetPlug Logo" style="height: 40px; width: auto; margin-right: 10px;">
-                GadgetPlug <i class="fab fa-apple me-2"></i>
-            </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#"><i class="fab fa-apple me-2"></i>GadgetPlug</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -198,53 +144,16 @@
         </div>
     </section>
 
-    <!-- iPhones Grid with Loader -->
+    <!-- iPhones Grid -->
     <section id="phones" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Available iPhones</h2>
-            <div id="phones-loader" class="loader-wrapper">
-                <div class="loader"></div>
-            </div>
-            <div class="row g-4 d-none" id="phones-container">
+            <div class="row g-4" id="phones-container">
                 <!-- Cards will be inserted here -->
             </div>
         </div>
     </section>
 
-    <!-- Modal for Product Details with Loader -->
-    <div class="modal fade" id="phoneModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="loader-wrapper" id="modal-loader">
-                        <div class="loader"></div>
-                    </div>
-                    <div class="slider-container mb-4" id="phone-images-slider">
-                        <span class="loader" id="image-loader"></span> <!-- Updated loader -->
-                    </div>
-                    <div class="colors-section mb-3 d-none" id="colors-section">
-                        <h6>Available Colors:</h6>
-                        <div id="colors-container" class="d-flex flex-wrap gap-2"></div>
-                        <div id="selected-color" class="mt-2 text-primary fw-bold"></div>
-                    </div>
-                    <div class="storage-section mb-3 d-none" id="storage-section">
-                        <h6>Storage Options:</h6>
-                        <div id="storage-container" class="d-flex flex-wrap gap-2"></div>
-                    </div>
-                    <div id="price-display" class="h4 text-primary mb-3 d-none"></div>
-                    <button class="btn btn-success w-100 d-none" id="confirm-buy-button" onclick="contactWhatsApp()">
-                        Confirm Buy
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
     <!-- Process Section -->
 <section id="process" class="steps-section py-5">
     <div class="container">
@@ -365,7 +274,6 @@
                 </div>
                 <div class="modal-body">
                     <div class="slider-container mb-4" id="phone-images-slider"></div>
-                    
                     <div class="colors-section mb-3">
                         <h6>Available Colors:</h6>
                         <div id="colors-container" class="d-flex flex-wrap gap-2"></div>
@@ -385,6 +293,7 @@
         </div>
     </div>
 
+    
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/27726171976" class="whatsapp-button">
@@ -395,20 +304,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
+        // Global variables to store state
         let phonesData = [];
         let selectedPhone = null;
         let selectedColor = null;
         let selectedStorage = null;
 
-        document.addEventListener('DOMContentLoaded', function () {
+        // Fetch data when page loads
+        document.addEventListener('DOMContentLoaded', function() {
             const apiUrl = 'https://script.google.com/macros/s/AKfycbzacqwwW_3r-YUz6jFQdGXHPEVgVwF10TfoIcBeav4ojbYlQapEurHkyoMHoMc3c-fM/exec';
-
+            
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
                     phonesData = data;
-                    document.getElementById('phones-loader').classList.add('d-none');
-                    document.getElementById('phones-container').classList.remove('d-none');
                     renderPhones(data);
                 })
                 .catch(error => {
@@ -419,8 +328,9 @@
 
         function renderPhones(phones) {
             const container = document.getElementById('phones-container');
-            container.innerHTML = '';
+            container.innerHTML = ''; // Clear existing content
 
+            // Group phones by model
             const groupedPhones = phones.reduce((acc, phone) => {
                 if (!acc[phone.Model]) {
                     acc[phone.Model] = [];
@@ -429,6 +339,7 @@
                 return acc;
             }, {});
 
+            // Create card for each model
             Object.keys(groupedPhones).forEach(model => {
                 const firstVariant = groupedPhones[model][0];
                 const card = `
@@ -444,51 +355,78 @@
         }
 
         function showPhoneDetails(model) {
-    selectedPhone = model;
-    const variants = phonesData.filter(phone => phone.Model === model);
+            selectedPhone = model;
+            const variants = phonesData.filter(phone => phone.Model === model);
+            
+            // Set modal title
+            document.getElementById('modal-title').textContent = model;
+            
+            // Set up image slider
+            const sliderContainer = document.getElementById('phone-images-slider');
+            sliderContainer.innerHTML = '';
+            
+            // Get first variant's images
+            const firstVariant = variants[0];
+            const images = [
+                firstVariant['Image 1 URL'],
+                firstVariant['Image 2 URL'],
+                firstVariant['Image 3 URL'],
+                firstVariant['Image 4 URL']
+            ].filter(url => url); // Remove empty URLs
 
-    document.getElementById('modal-loader').classList.remove('d-none');
-    document.getElementById('phone-images-slider').classList.add('d-none');
-    document.getElementById('colors-section').classList.add('d-none');
-    document.getElementById('storage-section').classList.add('d-none');
-    document.getElementById('price-display').classList.add('d-none');
-    document.getElementById('confirm-buy-button').classList.add('d-none');
+            images.forEach(url => {
+                sliderContainer.innerHTML += `
+                    <div><img src="${url}" class="img-fluid" alt="${model}"></div>
+                `;
+            });
 
-    document.getElementById('modal-title').textContent = model;
+            // Initialize or reinitialize slider
+            if ($('#phone-images-slider').hasClass('slick-initialized')) {
+                $('#phone-images-slider').slick('unslick');
+            }
+            $('#phone-images-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
 
-    // Update colors display
-    const colorsContainer = document.getElementById('colors-container');
-    colorsContainer.innerHTML = '';
+            // Set up color options
+            const colorsContainer = document.getElementById('colors-container');
+            colorsContainer.innerHTML = '';
+            
+            const uniqueColors = [...new Set(variants.map(v => v.Color))];
+            uniqueColors.forEach(color => {
+                const isAvailable = variants.find(v => v.Color === color && v.Available === true);
+                const colorDiv = document.createElement('div');
+                colorDiv.className = 'badge-color';
+                colorDiv.style.backgroundColor = getColorCode(color);
+                colorDiv.setAttribute('data-color', color);
+                if (!isAvailable) {
+                    colorDiv.classList.add('unavailable');
+                } else {
+                    colorDiv.onclick = () => selectColor(color);
+                }
+                colorsContainer.appendChild(colorDiv);
+            });
 
-    const uniqueColors = [...new Set(variants.map(v => v.Color))];
-    uniqueColors.forEach(color => {
-        const isAvailable = variants.find(v => v.Color === color && v.Available);
-        const colorDiv = document.createElement('div');
-        colorDiv.className = 'badge-color available';
-        colorDiv.style.backgroundColor = getColorCode(color);
-        colorDiv.setAttribute('data-color', color);
-        colorDiv.onclick = () => selectColor(color);
-        if (!isAvailable) {
-            colorDiv.classList.add('unavailable');
+            // Select first color by default if available
+            if (uniqueColors.length > 0) {
+                const firstAvailableColor = uniqueColors.find(color => variants.some(v => v.Color === color && v.Available));
+                if (firstAvailableColor) selectColor(firstAvailableColor);
+            }
+
+            // Show modal
+            const phoneModal = new bootstrap.Modal(document.getElementById('phoneModal'));
+            phoneModal.show();
         }
-        colorsContainer.appendChild(colorDiv);
-    });
-
-    if (uniqueColors.length > 0) {
-        const firstAvailableColor = uniqueColors.find(color =>
-            variants.some(v => v.Color === color && v.Available)
-        );
-        if (firstAvailableColor) selectColor(firstAvailableColor);
-    }
-
-    const phoneModal = new bootstrap.Modal(document.getElementById('phoneModal'));
-    phoneModal.show();
-}
 
         function selectColor(color) {
     selectedColor = color;
-    const variant = phonesData.find(phone => phone.Model === selectedPhone && phone.Color === color);
+    const variant = phonesData.find(p => p.Model === selectedPhone && p.Color === color);
 
+    // Update color selection UI
     document.querySelectorAll('.badge-color').forEach(badge => {
         badge.classList.remove('active');
         if (badge.getAttribute('data-color') === color) {
@@ -496,6 +434,7 @@
         }
     });
 
+    // Update the displayed color name
     document.getElementById('selected-color').textContent = `Selected Color: ${color}`;
 
     // Update storage options
@@ -510,16 +449,20 @@
         storageContainer.appendChild(button);
     });
 
+    // Select first storage option by default if available
     if (variant.Storages.length > 0) {
         selectStorage(variant.Storages[0]);
     }
 
-    // Update images for the selected color
+    // Update images
     updateImages(variant);
 }
+
+
         function selectStorage(storage) {
             selectedStorage = storage;
-
+            
+            // Update storage selection UI
             document.querySelectorAll('.storage-option').forEach(btn => {
                 btn.classList.remove('active');
                 if (btn.textContent === storage.storage) {
@@ -527,62 +470,38 @@
                 }
             });
 
+            // Update price display
             document.getElementById('price-display').textContent = `Price: ${storage.price}`;
         }
 
         function updateImages(variant) {
-    const sliderContainer = document.getElementById('phone-images-slider');
-    sliderContainer.innerHTML = '';
+            const sliderContainer = document.getElementById('phone-images-slider');
+            sliderContainer.innerHTML = '';
 
-    const images = [
-        variant['Image 1 URL'],
-        variant['Image 2 URL'],
-        variant['Image 3 URL'],
-        variant['Image 4 URL']
-    ].filter(url => url);
+            const images = [
+                variant['Image 1 URL'],
+                variant['Image 2 URL'],
+                variant['Image 3 URL'],
+                variant['Image 4 URL']
+            ].filter(url => url);
 
-    images.forEach(url => {
-        sliderContainer.innerHTML += `
-            <div class="image-loader-container">
-                <div class="loader">
-                    <div class="cell d-0"></div>
-                    <div class="cell d-1"></div>
-                    <div class="cell d-2"></div>
-                    <div class="cell d-3"></div>
-                    <div class="cell d-4"></div>
-                    <div class="cell d-5"></div>
-                    <div class="cell d-6"></div>
-                    <div class="cell d-7"></div>
-                    <div class="cell d-8"></div>
-                </div>
-                <img src="${url}" 
-                     class="img-fluid d-none" 
-                     alt="${variant.Model}" 
-                     onload="this.classList.remove('d-none'); this.previousElementSibling.style.display='none';"
-                     style="height: auto; width: 100%; object-fit: contain;">
-            </div>
-        `;
-    });
+            images.forEach(url => {
+                sliderContainer.innerHTML += `
+                    <div><img src="${url}" class="img-fluid" alt="${variant.Model}"></div>
+                `;
+            });
 
-    if ($('#phone-images-slider').hasClass('slick-initialized')) {
-        $('#phone-images-slider').slick('unslick');
-    }
-    $('#phone-images-slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 3000
-    });
-
-    document.getElementById('modal-loader').classList.add('d-none');
-    document.getElementById('phone-images-slider').classList.remove('d-none');
-    document.getElementById('colors-section').classList.remove('d-none');
-    document.getElementById('storage-section').classList.remove('d-none');
-    document.getElementById('price-display').classList.remove('d-none');
-    document.getElementById('confirm-buy-button').classList.remove('d-none');
-}
+            if ($('#phone-images-slider').hasClass('slick-initialized')) {
+                $('#phone-images-slider').slick('unslick');
+            }
+            $('#phone-images-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        }
 
         function getColorCode(colorName) {
             const colors = {
@@ -609,25 +528,25 @@
         }
 
         function contactWhatsApp() {
-            if (selectedPhone && selectedColor && selectedStorage) {
-                const message = `*Hi GadgetPlug*, I'm interested in the following iPhone model:\n\n` +
-                    `• *Model*: ${selectedPhone}\n` +
-                    `• *Color*: ${selectedColor}\n` +
-                    `• *Storage*: ${selectedStorage.storage}\n` +
-                    `• *Price*: ${selectedStorage.price}\n\n` +
-                    `Before I proceed, could you please confirm that these are the correct banking details for the payment?\n\n` +
-                    `*Banking Details:*\n` +
-                    `• *Bank*: TymeBank\n` +
-                    `• *Branch Code*: 678910\n` +
-                    `• *Account Number*: 51027780799\n` +
-                    `• *Email*: malepebrilliant04@gmail.com`;
+    if (selectedPhone && selectedColor && selectedStorage) {
+        const message = `*Hi GadgetPlug*, I'm interested in the following iPhone model:\n\n` +
+            `• *Model*: ${selectedPhone}\n` +
+            `• *Color*: ${selectedColor}\n` +
+            `• *Storage*: ${selectedStorage.storage}\n` +
+            `• *Price*: ${selectedStorage.price}\n\n` +
+            `Before I proceed, could you please confirm that these are the correct banking details for the payment?\n\n` +
+            `*Banking Details:*\n` +
+            `• *Bank*: TymeBank\n` +
+            `• *Branch Code*: 678910\n` +
+            `• *Account Number*: 51027780799\n` +
+            `• *Email*: malepebrilliant04@gmail.com`;
 
-                const whatsappUrl = `https://wa.me/27726171976?text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, '_blank');
-            } else {
-                alert('Please select both color and storage options.');
-            }
-        }
+        const whatsappUrl = `https://wa.me/27726171976?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    } else {
+        alert('Please select both color and storage options.');
+    }
+}
 
     </script>
 </body>
